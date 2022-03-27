@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import NavHoverBox from '../components/NavHoverBox'
 
-export default function NavItem({ ic, titl, descriptio, active, navSize }) {
+export default function NavItem({ icon, title, description, active, navSize }) {
     return (
         <Flex
             mt={30}
@@ -28,7 +28,7 @@ export default function NavItem({ ic, titl, descriptio, active, navSize }) {
                 >
                     <MenuButton w="100%">
                         <Flex>
-                            <Icon as={ic} fontSize="xl" color={active ? "#82AAAD" : "gray.500"} />
+                            <Icon as={icon} fontSize="xl" color={active ? "#82AAAD" : "gray.500"} />
                             <Text ml={5} display={navSize == "small" ? "none" : "flex"}>{titl}</Text>
                         </Flex>
                     </MenuButton>
@@ -40,7 +40,7 @@ export default function NavItem({ ic, titl, descriptio, active, navSize }) {
                     h={200}
                     ml={5}
                 >
-                    <NavHoverBox title={titl} icon={ic} description={descriptio} />
+                    <NavHoverBox title={title} icon={icon} description={description} />
                 </MenuList>
             </Menu>
         </Flex>
