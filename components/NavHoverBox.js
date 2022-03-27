@@ -6,7 +6,7 @@ import {
     Icon
 } from '@chakra-ui/react'
 
-export default function NavHoverBox({ titl, ic, descriptio }) {
+export default function NavHoverBox({ title, icon, description }) {
     return (
         <>
             <Flex
@@ -30,9 +30,9 @@ export default function NavHoverBox({ titl, ic, descriptio }) {
                 color="#fff"
                 textAlign="center"
             >
-                <Icon as={ic} fontSize="3xl" mb={4} />
-                <Heading size="md" fontWeight="normal">{titl}</Heading>
-                <Text>{descriptio}</Text>
+                <Icon as={icon} fontSize="3xl" mb={4} />
+                <Heading size="md" fontWeight="normal">{title}</Heading>
+                <Text>{description}</Text>
             </Flex>
         </>
     )
